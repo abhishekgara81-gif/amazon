@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23131921'/><path d='M7 21 C14 26, 21 26, 26 20' stroke='%23ff9900' stroke-width='2.6' fill='none' stroke-linecap='round'/><path d='M24 19 L28 20 L25 23 Z' fill='%23ff9900'/></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="ama.css">
+</head>
+<body>
+    <!-- Top Navigation Header -->
+    <header>
+        <div class="nav-bar">
+            <!-- Amazon Logo -->
+            <div class="nav-logo border">
+                <a href="#" class="logo-link" aria-label="Amazon Homepage">
+                    <svg class="amazon-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 36" width="105" height="34">
+                        <text x="0" y="24" fill="#ffffff" font-family="'Amazon Ember', 'Arial Black', Arial, sans-serif" font-weight="900" font-size="25" letter-spacing="-1">amazon</text>
+                        <text x="86" y="15" fill="#cccccc" font-family="'Amazon Ember', Arial, sans-serif" font-weight="bold" font-size="12">.in</text>
+                        <path d="M 6 28 C 26 36, 54 36, 74 27" stroke="#ff9900" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+                        <path d="M 72 25 L 80 27 L 74 32 Z" fill="#ff9900"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- Deliver to Location -->
+            <div class="nav-address border" id="nav-address-btn" title="Click to change location">
+                <p class="add-first">Deliver to</p>
+                <div class="add-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="add-sec" id="current-location-text">India</p>
+                </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="nav-search">
+                <div class="search-select-wrapper">
+                    <select class="search-select" aria-label="Select Search Category">
+                        <option value="all">All</option>
+                        <option value="alexa">Alexa Skills</option>
+                        <option value="amazon-devices">Amazon Devices</option>
+                        <option value="fashion">Amazon Fashion</option>
+                        <option value="appliances">Appliances</option>
+                        <option value="apps">Apps & Games</option>
+                        <option value="beauty">Beauty</option>
+                        <option value="books">Books</option>
+                        <option value="clothing">Clothing & Accessories</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="grocery">Grocery & Gourmet Foods</option>
+                        <option value="home">Home & Kitchen</option>
+                        <option value="mobiles">Mobiles</option>
+                        <option value="prime-video">Prime Video</option>
+                    </select>
+                    <i class="fa-solid fa-caret-down caret"></i>
+                </div>
+                <input type="text" placeholder="Search Amazon.in" class="search-input" aria-label="Search Amazon.in">
+                <button class="search-icon" aria-label="Submit Search" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- Language Selector -->
+            <div class="nav-lang border" id="nav-lang-btn">
+                <span class="flag">🇮🇳</span>
+                <span class="lang-text">EN</span>
+                <i class="fa-solid fa-caret-down nav-caret"></i>
+            </div>
+
+            <!-- Account & Lists with Flyout Menu -->
+            <div class="nav-signin border" id="nav-signin-menu">
+                <p class="nav-first"><span>Hello, sign in</span></p>
+                <p class="nav-sec">Account & Lists <i class="fa-solid fa-caret-down nav-caret"></i></p>
+                
+                <!-- Authentic Amazon Signin Hover Flyout -->
+                <div class="nav-flyout">
+                    <div class="flyout-arrow"></div>
+                    <div class="flyout-btn-wrap">
+                        <button class="flyout-signin-btn" onclick="alert('Sign in dialog (Demo)');">Sign in</button>
+                        <p class="flyout-new-cust">New customer? <a href="#">Start here.</a></p>
+                    </div>
+                    <div class="flyout-columns">
+                        <div class="flyout-col">
+                            <h4>Your Lists</h4>
+                            <a href="#">Create a Wish List</a>
+                            <a href="#">Wish from Any Website</a>
+                            <a href="#">Baby Wishlist</a>
+                            <a href="#">Discover Your Style</a>
+                            <a href="#">Explore Showroom</a>
+                        </div>
+                        <div class="flyout-col">
+                            <h4>Your Account</h4>
+                            <a href="#">Your Account</a>
+                            <a href="#">Your Orders</a>
+                            <a href="#">Your Wish List</a>
+                            <a href="#">Your Recommendations</a>
+                            <a href="#">Your Prime Membership</a>
+                            <a href="#">Your Prime Video</a>
+                            <a href="#">Your Subscribe & Save Items</a>
+                            <a href="#">Memberships & Subscriptions</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Returns & Orders -->
+            <div class="nav-return border" id="nav-orders-btn" title="View your order history & tracking" style="cursor: pointer;">
+                <p class="nav-first"><span>Returns</span></p>
+                <p class="nav-sec">& Orders <span class="nav-orders-badge" id="nav-orders-count" style="display: none;">0</span></p>
+            </div>
+
+            <!-- Cart Button -->
+            <div class="nav-cart border" id="nav-cart-btn" title="Open shopping cart">
+                <div class="cart-icon-wrapper">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
+                <span class="cart-title">Cart</span>
+            </div>
+        </div>
+
+        <!-- Sub-navigation Bar -->
+        <div class="pannel">
+            <div class="pannel-all border" id="open-sidebar-btn" title="Open All Categories Menu">
+                <i class="fa-solid fa-bars"></i>
+                <span>All</span>
+            </div>
+            <div class="pannel-ops">
+                <p class="border">Amazon miniTV</p>
+                <p class="border">Sell</p>
+                <p class="border">Best Sellers</p>
+                <p class="border">Today's Deals</p>
+                <p class="border">Mobiles</p>
+                <p class="border">Customer Service</p>
+                <p class="border">Prime <i class="fa-solid fa-caret-down nav-caret"></i></p>
+                <p class="border">Electronics</p>
+                <p class="border">Fashion</p>
+                <p class="border">New Releases</p>
+                <p class="border">Home & Kitchen</p>
+                <p class="border">Amazon Pay</p>
+                <p class="border">Computers</p>
+            </div>
+            <div class="pannel-deals border">
+                <span>Shop deals in Electronics</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner with Slider Controls -->
+    <div class="hero-section">
+        <button class="hero-slider-btn prev" id="hero-prev" aria-label="Previous Slide">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="hero-slider-btn next" id="hero-next" aria-label="Next Slide">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Top Promo Deals Shelf (Overlaps Hero Banner) -->
+    <div class="contant-shelf">
+        <div class="contant-header">
+            <h2>Today's Deals | Huge savings on fashion & daily essentials</h2>
+            <a href="#">See all deals</a>
+        </div>
+        <div class="contant">
+            <div class="box1 box">
+                <div class="prices">
+                    <h1>Under &#8377;399</h1>
+                    <p>Sarees</p>
+                    <div class="line">
+                        <span class="top">Top <br> brands</span>
+                        <span class="latest">Latest <br> trends</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box2 box">
+                <div class="price">
+                    <h1>Under &#8377;499</h1>
+                    <p>Jeans</p>
+                    <div class="line">
+                        <span class="top">Top <br> brands</span>
+                        <span class="latest">Latest <br> trends</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box3 box">
+                <div class="price">
+                    <h1>Under &#8377;399</h1>
+                    <p>Trendy dress</p>
+                    <div class="line">
+                        <span class="top">Top <br> brands</span>
+                        <span class="latest">Latest <br> trends</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box4 box">
+                <div class="price">
+                    <h1>Under &#8377;699</h1>
+                    <p>Bags & backpacks</p>
+                    <div class="line">
+                        <span class="top">Top <br> brands</span>
+                        <span class="latest">Latest <br> trends</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box5 box">
+                <div class="price">
+                    <h1>Under &#8377;99</h1>
+                    <p>Gardening Essentials <br> Tools, Pots & more</p>
+                    <div class="line">
+                        <span class="top">Top <br> brands</span>
+                        <span class="latest">Latest <br> trends</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Category 4-Grid Rows -->
+    <div class="main-contain">
+        <div class="boxx1 boxx">
+            <h3>Starting ₹169 | Must-have home buys</h3>
+            <div class="pic">
+                <div class="picc1 picc"></div>
+                <div class="picc2 picc"></div>
+            </div>
+            <div class="text">
+                <span>Min. 50% off | Bedsheets & covers</span>
+                <span>Min. 50% off | Wardrobe organizers</span>
+            </div>
+            <div class="pic">
+                <div class="picc3 picc"></div>
+                <div class="picc4 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹199 | Lighting solutions</span>
+                <span>Starting ₹129 | Figurines & decor</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx2 boxx">
+            <h3>Up to 75% off | Most loved earbuds, neckbands & more</h3>
+            <div class="pic">
+                <div class="picc21 picc"></div>
+                <div class="picc22 picc"></div>
+            </div>
+            <div class="text">
+                <span>Noise wireless earbuds</span>
+                <span>Bluetooth Neckbands</span>
+            </div>
+            <div class="pic">
+                <div class="picc23 picc"></div>
+                <div class="picc24 picc"></div>
+            </div>
+            <div class="text">
+                <span>Over ear headphones</span>
+                <span>Wired earphones</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx3 boxx">
+            <h3>Starting ₹149 | Bestselling headphones, earbuds & more</h3>
+            <div class="pic">
+                <div class="picc31 picc"></div>
+                <div class="picc32 picc"></div>
+            </div>
+            <div class="text">
+                <span>Truly wireless earbuds</span>
+                <span>Over ear headphones</span>
+            </div>
+            <div class="pic">
+                <div class="picc33 picc"></div>
+                <div class="picc34 picc"></div>
+            </div>
+            <div class="text">
+                <span>Neckbands</span>
+                <span>Wired earphones</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx4 boxx">
+            <h3>Party ready with Alexa</h3>
+            <div class="pic">
+                <div class="picc41 picc"></div>
+                <div class="picc42 picc"></div>
+            </div>
+            <div class="text">
+                <span>Fire TV Stick 4K Select</span>
+                <span>Smart Plug</span>
+            </div>
+            <div class="pic">
+                <div class="picc43 picc"></div>
+                <div class="picc44 picc"></div>
+            </div>
+            <div class="text">
+                <span>Samsung Ultra HD TV</span>
+                <span>Echo Spot with Alexa</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx5 boxx">
+            <h3>Starting ₹99 | Home furnishing & organization | Amazon Bazaar</h3>
+            <div class="pic">
+                <div class="picc61 picc"></div>
+                <div class="picc62 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹299 | Wardrobe storage baskets</span>
+                <span>Starting ₹99 | Hanging plant vines & decor</span>
+            </div>
+            <div class="pic">
+                <div class="picc63 picc"></div>
+                <div class="picc64 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹109 | Double bedsheet sets</span>
+                <span>Up to ₹100 cashback | Amazon Bazaar</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx6 boxx">
+            <h3>Starting ₹99 | Women's ethnic wear & makeup | Amazon Bazaar</h3>
+            <div class="pic">
+                <div class="picc65 picc"></div>
+                <div class="picc66 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹149 | Kurtas & ethnic sets</span>
+                <span>Starting ₹159 | Traditional sarees</span>
+            </div>
+            <div class="pic">
+                <div class="picc67 picc"></div>
+                <div class="picc64 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹99 | Makeup & eyeshadow palettes</span>
+                <span>Up to ₹100 cashback | Amazon Bazaar</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx7 boxx">
+            <h3>Starting ₹99 | Everyday style, beauty & kitchen | Amazon Bazaar</h3>
+            <div class="pic">
+                <div class="picc68 picc"></div>
+                <div class="picc69 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹99 | Facial rollers & beauty tools</span>
+                <span>Under ₹199 | Kurtis & polo t-shirts</span>
+            </div>
+            <div class="pic">
+                <div class="picc70 picc"></div>
+                <div class="picc64 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹299 | Spice container sets</span>
+                <span>Up to ₹100 cashback | Amazon Bazaar</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx8 boxx">
+            <h3>Starting ₹99 | Casual fashion & kitchen essentials | Amazon Bazaar</h3>
+            <div class="pic">
+                <div class="picc71 picc"></div>
+                <div class="picc72 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹299 | Men's graphic t-shirts</span>
+                <span>Starting ₹99 | Kitchen containers & pans</span>
+            </div>
+            <div class="pic">
+                <div class="picc73 picc"></div>
+                <div class="picc64 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹299 | Women's dresses & kurtis</span>
+                <span>Up to ₹100 cashback | Amazon Bazaar</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx9 boxx">
+            <h3>Starting ₹99 | Beauty, skincare & personal care</h3>
+            <div class="pic">
+                <div class="picc74 picc"></div>
+                <div class="picc75 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹499 | Face creams & moisturizers</span>
+                <span>Starting ₹99 | Eyeshadow & makeup kits</span>
+            </div>
+            <div class="pic">
+                <div class="picc76 picc"></div>
+                <div class="picc77 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹99 | Hair oils & conditioners</span>
+                <span>Under ₹499 | Handbags & lifestyle accessories</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx10 boxx">
+            <h3>Starting ₹99 | Cookware, baking & food storage | Amazon Bazaar</h3>
+            <div class="pic">
+                <div class="picc78 picc"></div>
+                <div class="picc79 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹99 | Silicone baking & chocolate moulds</span>
+                <span>Starting ₹99 | Airtight pantry storage jars</span>
+            </div>
+            <div class="pic">
+                <div class="picc80 picc"></div>
+                <div class="picc81 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹299 | Non-stick cookware sets</span>
+                <span>Up to ₹100 cashback | Amazon Bazaar</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx11 boxx">
+            <h3>Starting ₹99 | Home decor & bedroom essentials | Amazon Bazaar</h3>
+            <div class="pic">
+                <div class="picc82 picc"></div>
+                <div class="picc83 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹99 | Undergarment organizer boxes</span>
+                <span>Starting ₹139 | Mini artificial potted plants</span>
+            </div>
+            <div class="pic">
+                <div class="picc84 picc"></div>
+                <div class="picc85 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹99 | Cotton bedsheets & covers</span>
+                <span>Under ₹499 | Fashion bags & footwear</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx12 boxx">
+            <h3>Starting ₹99 | Men's casuals, audio & sneakers | Amazon Bazaar</h3>
+            <div class="pic">
+                <div class="picc86 picc"></div>
+                <div class="picc87 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹199 | Anime graphic t-shirts</span>
+                <span>Starting ₹99 | Wireless over-ear headphones</span>
+            </div>
+            <div class="pic">
+                <div class="picc88 picc"></div>
+                <div class="picc89 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹199 | Casual sneakers & shoes</span>
+                <span>Up to ₹100 cashback | Amazon Bazaar</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx13 boxx">
+            <h3>Up to 80% off on Home improvements + 10% Assured Cashback</h3>
+            <div class="pic">
+                <div class="picc90 picc"></div>
+                <div class="picc91 picc"></div>
+            </div>
+            <div class="text">
+                <span>Electrical & accessories</span>
+                <span>Ladders | Up to 50% off</span>
+            </div>
+            <div class="pic">
+                <div class="picc92 picc"></div>
+                <div class="picc93 picc"></div>
+            </div>
+            <div class="text">
+                <span>Security cameras | Up to 60% off</span>
+                <span>For business purchases</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx14 boxx">
+            <h3>Up to 60% off | Bestselling Printers & routers</h3>
+            <div class="pic">
+                <div class="picc94 picc"></div>
+                <div class="picc95 picc"></div>
+            </div>
+            <div class="text">
+                <span>Printers for office & home</span>
+                <span>All-in-One ink tank printers</span>
+            </div>
+            <div class="pic">
+                <div class="picc96 picc"></div>
+                <div class="picc97 picc"></div>
+            </div>
+            <div class="text">
+                <span>WiFi Adapters</span>
+                <span>Routers for streaming</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx15 boxx">
+            <h3>Buy office electronics at wholesale prices + 10% cashback</h3>
+            <div class="pic">
+                <div class="picc98 picc"></div>
+                <div class="picc99 picc"></div>
+            </div>
+            <div class="text">
+                <span>Up to 50% off on Desktops</span>
+                <span>Up to 40% off on Laptops</span>
+            </div>
+            <div class="pic">
+                <div class="picc101 picc"></div>
+                <div class="picc102 picc"></div>
+            </div>
+            <div class="text">
+                <span>Up to 60% off on Printers</span>
+                <span>For Business purchases</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx16 boxx">
+            <h3>Deals on Bluetooth speakers for your home</h3>
+            <div class="pic">
+                <div class="picc103 picc"></div>
+                <div class="picc104 picc"></div>
+            </div>
+            <div class="text">
+                <span>JBL PartyBox Bluetooth</span>
+                <span>Echo Dot with Alexa</span>
+            </div>
+            <div class="pic">
+                <div class="picc105 picc"></div>
+                <div class="picc106 picc"></div>
+            </div>
+            <div class="text">
+                <span>ZEBRONICS Bluetooth</span>
+                <span>Echo Pop Smart Speaker</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx17 boxx">
+            <h3>Minimum 60% off | Innerwear for all</h3>
+            <div class="pic">
+                <div class="picc107 picc"></div>
+                <div class="picc108 picc"></div>
+            </div>
+            <div class="text">
+                <span>Briefs, trunks & more</span>
+                <span>Bra, briefs & more</span>
+            </div>
+            <div class="pic">
+                <div class="picc109 picc"></div>
+                <div class="picc110 picc"></div>
+            </div>
+            <div class="text">
+                <span>Kids' innerwear</span>
+                <span>Briefs & more</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx18 boxx">
+            <h3>Under ₹499 | Best of home products</h3>
+            <div class="pic">
+                <div class="picc111 picc"></div>
+                <div class="picc112 picc"></div>
+            </div>
+            <div class="text">
+                <span>Wall clocks</span>
+                <span>Pillows</span>
+            </div>
+            <div class="pic">
+                <div class="picc113 picc"></div>
+                <div class="picc114 picc"></div>
+            </div>
+            <div class="text">
+                <span>Floor mats</span>
+                <span>Candles</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx19 boxx">
+            <h3>Up to 70% off | Storage devices & SSDs</h3>
+            <div class="pic">
+                <div class="picc115 picc"></div>
+                <div class="picc116 picc"></div>
+            </div>
+            <div class="text">
+                <span>External HDD</span>
+                <span>External SSD</span>
+            </div>
+            <div class="pic">
+                <div class="picc117 picc"></div>
+                <div class="picc118 picc"></div>
+            </div>
+            <div class="text">
+                <span>Memory Card</span>
+                <span>Pen Drive</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx20 boxx">
+            <h3>Daily needs | Starting ₹199</h3>
+            <div class="pic">
+                <div class="picc119 picc"></div>
+                <div class="picc120 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹499 | Cleaning supplies</span>
+                <span>Starting ₹199 | Oil & ghee</span>
+            </div>
+            <div class="pic">
+                <div class="picc121 picc"></div>
+                <div class="picc122 picc"></div>
+            </div>
+            <div class="text">
+                <span>Under ₹299 | Tea & coffee</span>
+                <span>Under ₹499 | Baby diapers</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx21 boxx">
+            <h3>Premium accessories from the top brands</h3>
+            <div class="pic">
+                <div class="picc123 picc"></div>
+                <div class="picc124 picc"></div>
+            </div>
+            <div class="text">
+                <span>Logitech | Starting ₹399</span>
+                <span>HP | Starting ₹269</span>
+            </div>
+            <div class="pic">
+                <div class="picc125 picc"></div>
+                <div class="picc126 picc"></div>
+            </div>
+            <div class="text">
+                <span>Asus | Starting ₹599</span>
+                <span>Dell | Starting ₹259</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx22 boxx">
+            <h3>Starting ₹199 | Dry fruits & seeds</h3>
+            <div class="pic">
+                <div class="picc127 picc"></div>
+                <div class="picc128 picc"></div>
+            </div>
+            <div class="text">
+                <span>Almonds</span>
+                <span>Dates</span>
+            </div>
+            <div class="pic">
+                <div class="picc129 picc"></div>
+                <div class="picc130 picc"></div>
+            </div>
+            <div class="text">
+                <span>Cashews</span>
+                <span>Chia seeds</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx23 boxx">
+            <h3>Up to 60% off | Bestselling stationery supplies & more</h3>
+            <div class="pic">
+                <div class="picc131 picc"></div>
+                <div class="picc132 picc"></div>
+            </div>
+            <div class="text">
+                <span>Pens & pencils</span>
+                <span>Notebooks & diaries</span>
+            </div>
+            <div class="pic">
+                <div class="picc133 picc"></div>
+                <div class="picc134 picc"></div>
+            </div>
+            <div class="text">
+                <span>Art & crafts</span>
+                <span>Gifting items</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx24 boxx">
+            <h3>Starting ₹149 | Your favourite headphone brands</h3>
+            <div class="pic">
+                <div class="picc135 picc"></div>
+                <div class="picc136 picc"></div>
+            </div>
+            <div class="text">
+                <span>boAt</span>
+                <span>Boult Audio</span>
+            </div>
+            <div class="pic">
+                <div class="picc137 picc"></div>
+                <div class="picc138 picc"></div>
+            </div>
+            <div class="text">
+                <span>Noise</span>
+                <span>Zebronics</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx25 boxx">
+            <h3>Business pricing on Cameras + Up to 18% GST credit</h3>
+            <div class="pic">
+                <div class="picc139 picc"></div>
+                <div class="picc140 picc"></div>
+            </div>
+            <div class="text">
+                <span>Dash cameras | Up to 40% off</span>
+                <span>Mirrorless cameras | Up to 30% off</span>
+            </div>
+            <div class="pic">
+                <div class="picc141 picc"></div>
+                <div class="picc142 picc"></div>
+            </div>
+            <div class="text">
+                <span>Action cameras | Up to 50% off</span>
+                <span>10% Assured cashback</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx26 boxx">
+            <h3>Up to 40% off | Winter care essentials</h3>
+            <div class="pic">
+                <div class="picc143 picc"></div>
+                <div class="picc144 picc"></div>
+            </div>
+            <div class="text">
+                <span>Tea & coffee</span>
+                <span>Snacks</span>
+            </div>
+            <div class="pic">
+                <div class="picc145 picc"></div>
+                <div class="picc146 picc"></div>
+            </div>
+            <div class="text">
+                <span>Vitamins & minerals</span>
+                <span>Detergents</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx27 boxx">
+            <h3>Up to 60% off | Back to school essentials</h3>
+            <div class="pic">
+                <div class="picc147 picc"></div>
+                <div class="picc148 picc"></div>
+            </div>
+            <div class="text">
+                <span>Drawing & painting sets</span>
+                <span>Rulers & set squares</span>
+            </div>
+            <div class="pic">
+                <div class="picc149 picc"></div>
+                <div class="picc150 picc"></div>
+            </div>
+            <div class="text">
+                <span>Pencil cases</span>
+                <span>Lunch boxes</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx28 boxx">
+            <h3>Latest TVs from your favourite brands | Amazon Exclusive</h3>
+            <div class="pic">
+                <div class="picc154 picc"></div>
+                <div class="picc153 picc"></div>
+            </div>
+            <div class="text">
+                <span>Samsung 4K QLED TV</span>
+                <span>Lumio Vision 9 4K TV</span>
+            </div>
+            <div class="pic">
+                <div class="picc151 picc"></div>
+                <div class="picc155 picc"></div>
+            </div>
+            <div class="text">
+                <span>Ultra HD 4K Smart TV</span>
+                <span>Fire TV Edition Smart TV</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx29 boxx">
+            <h3>Stationery, office products, Arts & crafts</h3>
+            <div class="pic">
+                <div class="picc158 picc"></div>
+                <div class="picc159 picc"></div>
+            </div>
+            <div class="text">
+                <span>Arts & crafts</span>
+                <span>Ink & ball pens</span>
+            </div>
+            <div class="pic">
+                <div class="picc160 picc"></div>
+                <div class="picc161 picc"></div>
+            </div>
+            <div class="text">
+                <span>Notebooks & papers</span>
+                <span>Stationery products</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx30 boxx">
+            <h3>Starting ₹199 | Deals on RC cars & more</h3>
+            <div class="pic">
+                <div class="picc162 picc"></div>
+                <div class="picc163 picc"></div>
+            </div>
+            <div class="text">
+                <span>RC cars</span>
+                <span>Toy airplanes</span>
+            </div>
+            <div class="pic">
+                <div class="picc164 picc"></div>
+                <div class="picc165 picc"></div>
+            </div>
+            <div class="text">
+                <span>Toy buses</span>
+                <span>Motor vehicle playsets</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx31 boxx">
+            <h3>Under ₹499 | Top offers on top styles</h3>
+            <div class="pic">
+                <div class="picc166 picc"></div>
+                <div class="picc167 picc"></div>
+            </div>
+            <div class="text">
+                <span>Kurtas & sets</span>
+                <span>Dresses & jumpsuits</span>
+            </div>
+            <div class="pic">
+                <div class="picc168 picc"></div>
+                <div class="picc169 picc"></div>
+            </div>
+            <div class="text">
+                <span>T-shirts & polos</span>
+                <span>Formalwear</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx32 boxx">
+            <h3>Up to 75% off | Best deals on mobile accessories</h3>
+            <div class="pic">
+                <div class="picc170 picc"></div>
+                <div class="picc171 picc"></div>
+            </div>
+            <div class="text">
+                <span>Samsung | Up to 35% off</span>
+                <span>Daily Objects | Up to 50% off</span>
+            </div>
+            <div class="pic">
+                <div class="picc172 picc"></div>
+                <div class="picc173 picc"></div>
+            </div>
+            <div class="text">
+                <span>URBN | Up to 65% off</span>
+                <span>Spigen | Up to 75% off</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx33 boxx">
+            <h3>Popular smartphone brands</h3>
+            <div class="pic">
+                <div class="picc174 picc"></div>
+                <div class="picc175 picc"></div>
+            </div>
+            <div class="text">
+                <span>Samsung | Starting ₹14,999</span>
+                <span>Redmi | Starting ₹11,999</span>
+            </div>
+            <div class="pic">
+                <div class="picc176 picc"></div>
+                <div class="picc177 picc"></div>
+            </div>
+            <div class="text">
+                <span>Realme | Starting ₹12,999</span>
+                <span>Vivo | Starting ₹29,999</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx34 boxx">
+            <h3>Starting ₹299 | Home essentials</h3>
+            <div class="pic">
+                <div class="picc178 picc"></div>
+                <div class="picc179 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹229 | Kitchen tools</span>
+                <span>Min. 50% off | Home decor</span>
+            </div>
+            <div class="pic">
+                <div class="picc180 picc"></div>
+                <div class="picc181 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹299 | Home storage</span>
+                <span>Starting ₹129 | Home utilities</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx35 boxx">
+            <h3>Bring joy with the perfect wedding gifts</h3>
+            <div class="pic">
+                <div class="picc182 picc"></div>
+                <div class="picc183 picc"></div>
+            </div>
+            <div class="text">
+                <span>Dinner set</span>
+                <span>Kitchen appliances</span>
+            </div>
+            <div class="pic">
+                <div class="picc184 picc"></div>
+                <div class="picc185 picc"></div>
+            </div>
+            <div class="text">
+                <span>Jewellery</span>
+                <span>Gift Cards</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx36 boxx">
+            <h3>Up to 60% off | Household needs for your family</h3>
+            <div class="pic">
+                <div class="picc186 picc"></div>
+                <div class="picc187 picc"></div>
+            </div>
+            <div class="text">
+                <span>Laundry & cleaners</span>
+                <span>Tea, coffee & beverages</span>
+            </div>
+            <div class="pic">
+                <div class="picc188 picc"></div>
+                <div class="picc189 picc"></div>
+            </div>
+            <div class="text">
+                <span>Baby diapers & wipes</span>
+                <span>Snacks, biscuits & more</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <div class="main-contain">
+        <div class="boxx37 boxx">
+            <h3>Healthy smiles | Starting ₹299</h3>
+            <div class="pic">
+                <div class="picc190 picc"></div>
+                <div class="picc191 picc"></div>
+            </div>
+            <div class="text">
+                <span>Electric toothbrushes</span>
+                <span>Flossers & more</span>
+            </div>
+            <div class="pic">
+                <div class="picc192 picc"></div>
+                <div class="picc193 picc"></div>
+            </div>
+            <div class="text">
+                <span>Kids electric toothbrushes</span>
+                <span>Brush heads & more</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx38 boxx">
+            <h3>Starting ₹99 | Kitchen everyday essentials</h3>
+            <div class="pic">
+                <div class="picc194 picc"></div>
+                <div class="picc195 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹99 | Kitchen containers</span>
+                <span>Starting ₹399 | Casseroles</span>
+            </div>
+            <div class="pic">
+                <div class="picc196 picc"></div>
+                <div class="picc197 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹149 | Storage jars</span>
+                <span>Starting ₹299 | Bowls</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx39 boxx">
+            <h3>Starting ₹99 | Kitchen deals | Amazon Brands & more</h3>
+            <div class="pic">
+                <div class="picc198 picc"></div>
+                <div class="picc199 picc"></div>
+            </div>
+            <div class="text">
+                <span>Starting ₹149 | Water bottles</span>
+                <span>Starting ₹299 | Cookware</span>
+            </div>
+            <div class="pic">
+                <div class="picc200 picc"></div>
+                <div class="picc201 picc"></div>
+            </div>
+            <div class="text">
+                <span>Min. 40% off | Kitchen tools</span>
+                <span>Starting ₹99 | Kitchen essentials</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+        <div class="boxx40 boxx">
+            <h3>Starting ₹199 | Shop for pet care</h3>
+            <div class="pic">
+                <div class="picc202 picc"></div>
+                <div class="picc203 picc"></div>
+            </div>
+            <div class="text">
+                <span>Dog products</span>
+                <span>Cat products</span>
+            </div>
+            <div class="pic">
+                <div class="picc204 picc"></div>
+                <div class="picc205 picc"></div>
+            </div>
+            <div class="text">
+                <span>Bird products</span>
+                <span>Aquatic products</span>
+            </div>
+            <a href="#" class="boxx-link">See all offers</a>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="peed" id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">
+        <span>Back to top</span>
+    </div>
+
+    <!-- Main Footer Links -->
+    <div class="footer">
+        <div class="know">
+            <h3 class="am">Get to Know Us</h3>
+            <p>About Amazon</p>
+            <p>Careers</p>
+            <p>Press Releases</p>
+            <p>Amazon Science</p>
+        </div>
+
+        <div class="connect">
+            <h3 class="am">Connect with Us</h3>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Instagram</p>
+        </div>
+
+        <div class="money">
+            <h3 class="am">Make Money with Us</h3>
+            <p>Sell on Amazon</p>
+            <p>Sell under Amazon Accelerator</p>
+            <p>Protect and Build Your Brand</p>
+            <p>Amazon Global Selling</p>
+            <p>Supply to Amazon</p>
+            <p>Become an Affiliate</p>
+            <p>Fulfilment by Amazon</p>
+            <p>Advertise Your Products</p>
+            <p>Amazon Pay on Merchants</p>
+        </div>
+
+        <div class="help">
+            <h3 class="am">Let Us Help You</h3>
+            <p>COVID-19 and Amazon</p>
+            <p>Your Account</p>
+            <p>Returns Centre</p>
+            <p>Recalls and Product Safety Alerts</p>
+            <p>100% Purchase Protection</p>
+            <p>Amazon App Download</p>
+            <p>Help</p>
+        </div>
+    </div>
+
+    <!-- Footer Language & Country Divider -->
+    <div class="footer-divider">
+        <svg class="footer-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 112 36" width="90" height="30">
+            <text x="0" y="24" fill="#ffffff" font-family="'Amazon Ember', 'Arial Black', Arial, sans-serif" font-weight="900" font-size="25" letter-spacing="-1">amazon</text>
+            <text x="86" y="15" fill="#cccccc" font-family="'Amazon Ember', Arial, sans-serif" font-weight="bold" font-size="12">.in</text>
+            <path d="M 6 28 C 26 36, 54 36, 74 27" stroke="#ff9900" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+            <path d="M 72 25 L 80 27 L 74 32 Z" fill="#ff9900"/>
+        </svg>
+
+        <div class="footer-divider-options">
+            <div class="footer-opt">
+                <i class="fa-solid fa-globe"></i>
+                <span>English</span>
+            </div>
+            <div class="footer-opt">
+                <i class="fa-solid fa-indian-rupee-sign"></i>
+                <span>INR - Indian Rupee</span>
+            </div>
+            <div class="footer-opt">
+                <span>🇮🇳 India</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Secondary Footer: Amazon Services -->
+    <div class="footer-sec">
+        <div class="abebook">
+            <div>
+                <h4>AbeBooks</h4>
+                <p>Books, art & collectibles</p>
+            </div>
+            <div>
+                <h4>Amazon Web Services</h4>
+                <p>Scalable Cloud Computing Services</p>
+            </div>
+            <div>
+                <h4>Audible</h4>
+                <p>Download Audio Books</p>
+            </div>
+            <div>
+                <h4>IMDb</h4>
+                <p>Movies, TV & Celebrities</p>
+            </div>
+        </div>
+
+        <div class="shopbop">
+            <div>
+                <h4>Shopbop</h4>
+                <p>Designer Fashion Brands</p>
+            </div>
+            <div>
+                <h4>Amazon Business</h4>
+                <p>Everything For Your Business</p>
+            </div>
+            <div>
+                <h4>Prime Now</h4>
+                <p>2-Hour Delivery on Everyday Items</p>
+            </div>
+            <div>
+                <h4>Amazon Prime Music</h4>
+                <p>100 million songs, ad-free</p>
+            </div>
+        </div>
+
+        <div class="footer-legal">
+            <div class="footer-legal-links">
+                <a href="#">Conditions of Use & Sale</a>
+                <a href="#">Privacy Notice</a>
+                <a href="#">Interest-Based Ads</a>
+            </div>
+            <p>© 1996-2026, Amazon.com, Inc. or its affiliates</p>
+        </div>
+    </div>
+
+    <!-- Creator Branding -->
+    <div class="abhi">
+        <h5>
+            © 2026 | Amazon Clone | Built with 💻 & ❤️ by <span>Abhishek Singh</span>
+        </h5>
+    </div>
+
+    <!-- Sidebar Navigation Drawer (Slide-in from Left) -->
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <i class="fa-solid fa-circle-user"></i>
+            <span>Hello, sign in</span>
+        </div>
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <div class="sidebar-title">Trending</div>
+                <a href="#" class="sidebar-link"><span>Best Sellers</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>New Releases</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Movers and Shakers</span><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Digital Content & Devices</div>
+                <a href="#" class="sidebar-link"><span>Amazon miniTV</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Echo & Alexa</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Fire TV</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Kindle E-readers</span><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Shop by Category</div>
+                <a href="#" class="sidebar-link"><span>Mobiles & Computers</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>TV, Appliances, Electronics</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Men's Fashion</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Women's Fashion</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Home, Kitchen, Pets</span><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Programs & Features</div>
+                <a href="#" class="sidebar-link"><span>Gift Cards & Mobile Recharges</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Amazon Pay</span><i class="fa-solid fa-chevron-right"></i></a>
+                <a href="#" class="sidebar-link"><span>Amazon Launchpad</span><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+            <div class="sidebar-section">
+                <div class="sidebar-title">Help & Settings</div>
+                <a href="#" class="sidebar-link"><span>Your Account</span></a>
+                <a href="#" class="sidebar-link"><span>Customer Service</span></a>
+                <a href="#" class="sidebar-link"><span>Sign In</span></a>
+            </div>
+        </div>
+    </div>
+    <button class="sidebar-close" id="close-sidebar" aria-label="Close Sidebar Menu">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Cart Drawer (Slide-in from Right) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+            <h3><i class="fa-solid fa-cart-shopping"></i> Shopping Cart</h3>
+            <button class="close-cart-btn" id="close-cart" aria-label="Close Shopping Cart">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cart-drawer-body">
+            <div class="cart-empty" id="cart-empty">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+                <h4>Your Amazon Cart is empty</h4>
+                <p>Click on any product offer to add it to your cart!</p>
+            </div>
+            <div id="cart-items-container"></div>
+        </div>
+        <div class="cart-drawer-footer">
+            <div class="cart-subtotal-row">
+                <span>Subtotal:</span>
+                <span id="cart-subtotal">₹0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="alert('Proceeding to checkout! Thank you for testing the Amazon Clone.');">
+                Proceed to Buy
+            </button>
+        </div>
+    </div>
+
+    <!-- Location Modal Popup -->
+    <div class="location-modal-overlay" id="location-modal-overlay"></div>
+    <div class="location-modal" id="location-modal">
+        <div class="location-modal-header">
+            <h3>Choose your location</h3>
+            <button class="close-modal-btn" id="close-location-modal" aria-label="Close Dialog">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="location-modal-body">
+            <p class="location-desc">Select a delivery location to see product availability and delivery options</p>
+            <div class="pincode-input-wrap">
+                <input type="text" placeholder="Enter an Indian pincode" id="pincode-input" maxlength="6">
+                <button id="apply-pincode-btn">Apply</button>
+            </div>
+            <div class="location-or-divider"><span>or select city</span></div>
+            <select class="country-select" id="city-select">
+                <option value="New Delhi">New Delhi 110001</option>
+                <option value="Mumbai">Mumbai 400001</option>
+                <option value="Bangalore">Bangalore 560001</option>
+                <option value="Hyderabad">Hyderabad 500001</option>
+                <option value="Kolkata">Kolkata 700001</option>
+                <option value="Chennai">Chennai 600001</option>
+                <option value="Pune">Pune 411001</option>
+                <option value="Ahmedabad">Ahmedabad 380001</option>
+            </select>
+        </div>
+    </div>
+
+    
+    <!-- Product Quick View Modal -->
+    <div class="product-modal-overlay" id="product-modal-overlay"></div>
+    <div class="product-modal" id="product-modal">
+        <button class="close-product-modal-btn" id="close-product-modal" aria-label="Close Preview">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="product-modal-grid">
+            <div class="product-modal-img-wrap">
+                <img class="product-modal-img" id="quickview-img" src="amazon pic/11.jpg" alt="Product Image">
+            </div>
+            <div class="product-modal-info">
+                <span class="amazons-choice-badge"><i class="fa-solid fa-award"></i> Amazon's Choice</span>
+                <h2 id="quickview-title">Product Title</h2>
+                <div class="product-modal-rating">
+                    <span class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></span>
+                    <span class="rating-val">4.6</span>
+                    <span class="rating-count">24,819 ratings</span>
+                </div>
+                <div class="product-modal-price-box">
+                    <div class="deal-badge-row">
+                        <span class="deal-tag">Limited time deal</span>
+                    </div>
+                    <div class="price-row">
+                        <span class="price-currency">₹</span>
+                        <span class="price-num" id="quickview-price">499</span>
+                        <span class="mrp-row">M.R.P.: <span class="mrp-num" id="quickview-mrp">₹1,999</span></span>
+                        <span class="discount-num">(75% off)</span>
+                    </div>
+                    <p class="tax-inclusive">Inclusive of all taxes</p>
+                </div>
+                <div class="delivery-badge-box">
+                    <p><i class="fa-solid fa-truck-fast"></i> <strong>FREE delivery</strong> Tomorrow</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Delivering to India - Order within <strong>5 hrs 20 mins</strong></p>
+                </div>
+                <div class="stock-status">
+                    <span class="in-stock-text">In stock</span>
+                    <p class="sold-by">Sold by <strong>RetailNet</strong> and <strong>Fulfilled by Amazon</strong>.</p>
+                </div>
+                <div class="product-modal-actions">
+                    <button class="btn-add-to-cart" id="quickview-add-cart-btn">
+                        <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+                    </button>
+                    <button class="btn-buy-now" id="quickview-buy-now-btn">
+                        <i class="fa-solid fa-bolt"></i> Buy Now
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Checkout Modal -->
+    <div class="checkout-modal-overlay" id="checkout-modal-overlay"></div>
+    <div class="checkout-modal" id="checkout-modal">
+        <div class="checkout-modal-header">
+            <h3><i class="fa-solid fa-lock"></i> Amazon.in Checkout</h3>
+            <button class="close-checkout-btn" id="close-checkout-modal" aria-label="Close Checkout">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="checkout-modal-body" id="checkout-content">
+            <div class="checkout-section">
+                <h4><i class="fa-solid fa-location-dot"></i> Delivery Address</h4>
+                <div class="checkout-address-box">
+                    <strong>Abhishek Singh</strong><br>
+                    Flat 402, Royal Residency, Connaught Place<br>
+                    New Delhi, Delhi - 110001, India<br>
+                    Phone: +91 98765 43210
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <h4><i class="fa-solid fa-truck-fast"></i> Choose Delivery Speed</h4>
+                <div class="payment-options">
+                    <label class="payment-option-label">
+                        <input type="radio" name="delivery_speed" value="60" checked>
+                        <span><i class="fa-solid fa-bolt" style="color: #e67a00;"></i> <strong>⚡ Express Demo (60 Seconds)</strong> — Watch order status countdown & flip to 'Delivered' live!</span>
+                    </label>
+                    <label class="payment-option-label">
+                        <input type="radio" name="delivery_speed" value="standard">
+                        <span><i class="fa-solid fa-box" style="color: #007185;"></i> <strong>FREE Prime Delivery (Tomorrow by 8:00 PM)</strong> — Standard authentic Amazon delivery</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <h4><i class="fa-solid fa-credit-card"></i> Payment Method</h4>
+                <div class="payment-options">
+                    <label class="payment-option-label">
+                        <input type="radio" name="payment" value="upi" checked>
+                        <span><i class="fa-solid fa-mobile-screen-button"></i> Amazon Pay UPI / QR Code</span>
+                    </label>
+                    <label class="payment-option-label">
+                        <input type="radio" name="payment" value="card">
+                        <span><i class="fa-regular fa-credit-card"></i> Credit / Debit Card (Visa, MasterCard, RuPay)</span>
+                    </label>
+                    <label class="payment-option-label">
+                        <input type="radio" name="payment" value="cod">
+                        <span><i class="fa-solid fa-hand-holding-dollar"></i> Cash on Delivery (COD)</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="checkout-section">
+                <h4><i class="fa-solid fa-receipt"></i> Order Summary</h4>
+                <div class="order-summary-box">
+                    <div class="order-summary-row">
+                        <span>Items Subtotal:</span>
+                        <span id="checkout-items-subtotal">₹0.00</span>
+                    </div>
+                    <div class="order-summary-row">
+                        <span>Delivery Charges:</span>
+                        <span class="free-delivery-badge">FREE Delivery</span>
+                    </div>
+                    <div class="order-summary-row">
+                        <span>Promotion Applied:</span>
+                        <span style="color: #007600;">-₹100.00 (Welcome Deal)</span>
+                    </div>
+                    <div class="order-summary-row total">
+                        <span>Order Total:</span>
+                        <span id="checkout-order-total">₹0.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="place-order-btn" id="place-order-btn">
+                <i class="fa-solid fa-check"></i> Place Your Order and Pay
+            </button>
+        </div>
+        <div class="checkout-modal-body" id="checkout-success" style="display: none;">
+            <div class="order-success-view">
+                <div class="order-success-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <h3>Order Placed Successfully!</h3>
+                <p id="checkout-success-msg">Thank you for shopping with Amazon.in. Your order has been placed and is being prepared.</p>
+                <div class="order-id-badge" id="order-id-badge">Order #402-9831724-1082649</div>
+                <div class="order-eta-highlight" id="order-eta-highlight" style="margin: 14px auto; padding: 10px 16px; background: #e7f4e8; border: 1px solid #007600; border-radius: 6px; font-weight: 600; color: #007600; max-width: 420px;">
+                    <i class="fa-solid fa-truck-fast"></i> <span id="checkout-eta-display">Arriving in 60 seconds (Live Demo)</span>
+                </div>
+                <div class="checkout-success-actions" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 15px;">
+                    <button class="view-orders-btn" id="view-orders-success-btn" style="background-color: #ffd814; border: 1px solid #fcd200; border-radius: 8px; padding: 10px 18px; font-weight: 600; cursor: pointer; display: flex; align-items: center; gap: 8px;">
+                        <i class="fa-solid fa-box-archive"></i> Track in Your Orders
+                    </button>
+                    <button class="continue-shopping-btn" id="continue-shopping-btn">
+                        <i class="fa-solid fa-bag-shopping"></i> Continue Shopping
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Category Deals Showcase Modal -->
+    <div class="deals-modal-overlay" id="deals-modal-overlay"></div>
+    <div class="deals-modal" id="deals-modal">
+        <div class="deals-modal-header">
+            <h3><i class="fa-solid fa-tags"></i> <span id="deals-modal-title">All Offers & Deals</span></h3>
+            <button class="close-deals-modal-btn" id="close-deals-modal" aria-label="Close Offers">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="deals-modal-body" id="deals-modal-items"></div>
+    </div>
+
+    <!-- Your Orders Modal (100% Authentic Amazon Order History & Tracking) -->
+    <div class="orders-modal-overlay" id="orders-modal-overlay"></div>
+    <div class="orders-modal" id="orders-modal">
+        <div class="orders-modal-header">
+            <div class="orders-header-title">
+                <i class="fa-solid fa-box-archive" style="color: #ff9900; font-size: 22px;"></i>
+                <h3>Your Orders</h3>
+                <span class="orders-count-pill" id="orders-count-badge">0 orders</span>
+            </div>
+            <button class="close-orders-modal-btn" id="close-orders-modal" aria-label="Close Orders">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="orders-modal-toolbar">
+            <div class="orders-tabs">
+                <button class="orders-tab active" data-tab="all"><i class="fa-solid fa-list"></i> All Orders</button>
+                <button class="orders-tab" data-tab="active"><i class="fa-solid fa-truck-fast"></i> In Transit</button>
+                <button class="orders-tab" data-tab="delivered"><i class="fa-solid fa-circle-check"></i> Delivered</button>
+            </div>
+            <button class="orders-clear-btn" id="clear-orders-btn" title="Clear all orders history">
+                <i class="fa-regular fa-trash-can"></i> Clear History
+            </button>
+        </div>
+        <div class="orders-modal-body" id="orders-modal-body">
+            <!-- Dynamically populated orders -->
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
